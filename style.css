@@ -5,5 +5,56 @@
 }
 
 body {
-  background-color: darkolivegreen;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-template-rows: 0.5fr 1fr 0.5fr;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+#cookie-top {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-color: chartreuse;
+}
+
+#cookie-container {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cookie-container img {
+  max-width: 50%;
+  max-height: 50%;
+  cursor: pointer;
+}
+
+#cookie-shop {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  background-color: rgb(255, 163, 43);
+}
+#cookie-counter {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-color: brown;
+}
+#cookie-stats {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  background-color: blueviolet;
 }
