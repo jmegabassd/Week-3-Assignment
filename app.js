@@ -21,9 +21,7 @@ console.log("MOO!");
 
 const cookieCountTotal = document.getElementById("counter-clicked");
 const cpsTotal = document.getElementById("counter-cps");
-
-// let cookieCount = 0;
-// let cps = 0;
+const cookieButtonClicker = document.getElementById("cookie-clicker-button");
 
 let stats = {
   cookieCount: 0,
@@ -31,12 +29,17 @@ let stats = {
 };
 
 function updateCookieTotal() {
-  cookieCountTotal.textContent = stats.cookieCount + " Have been clicked!";
+  cookieCountTotal.textContent = stats.cookieCount + " have been clicked!";
 }
 
 function updateCPS() {
-  cpsTotal.textContent = stats.cps + " Cookies per second!";
+  cpsTotal.textContent = stats.cps + " cookies per second!";
 }
+
+cookieButtonClicker.addEventListener("click", () => {
+  stats.cookieCount++;
+  updateCookieTotal();
+});
 
 updateCookieTotal();
 updateCPS();
