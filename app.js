@@ -19,13 +19,27 @@ console.log("MOO!");
 
 //Data Storage
 
-let cookieCount = 0;
-let cps = 0;
+const cookieCountTotal = document.getElementById("counter-clicked");
+const cpsTotal = document.getElementById("counter-cps");
+
+// let cookieCount = 0;
+// let cps = 0;
 
 let stats = {
   cookieCount: 0,
   cps: 0,
 };
+
+function updateCookieTotal() {
+  cookieCountTotal.textContent = stats.cookieCount + " Have been clicked!";
+}
+
+function updateCPS() {
+  cpsTotal.textContent = stats.cps + " Cookies per second!";
+}
+
+updateCookieTotal();
+updateCPS();
 
 //if there is data in local Storage, update stats with this data so that the user picks up where they left off
 
