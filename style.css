@@ -72,7 +72,11 @@ body {
   grid-row-end: 4;
   background-color: white;
   min-height: 80px;
-  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  margin: 5px;
 }
 #cookie-stats {
   grid-column-start: 3;
@@ -81,4 +85,25 @@ body {
   grid-row-end: 4;
   background-color: white;
   border: 2px solid black;
+}
+
+#counter-clicked {
+  height: 25%;
+  width: 100%;
+  font-size: 30px;
+  background-color: chartreuse;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  text-wrap: inherit;
+}
+
+#counter-cps {
+  height: 25%;
+  width: 100%;
+  font-size: 30px;
+  background-color: chartreuse;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
 }

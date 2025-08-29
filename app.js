@@ -29,7 +29,8 @@ let stats = {
 };
 
 function updateCookieTotal() {
-  cookieCountTotal.textContent = stats.cookieCount + " have been clicked!";
+  cookieCountTotal.textContent =
+    stats.cookieCount + " cookies have been clicked!";
 }
 
 function updateCPS() {
@@ -41,8 +42,15 @@ cookieButtonClicker.addEventListener("click", () => {
   updateCookieTotal();
 });
 
+function addCPS() {
+  stats.cookieCount += stats.cps;
+  updateCookieTotal();
+  setInterval(addCPS, 1000);
+}
+
 updateCookieTotal();
 updateCPS();
+addCPS();
 
 //if there is data in local Storage, update stats with this data so that the user picks up where they left off
 
