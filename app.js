@@ -19,13 +19,13 @@ console.log("MOO!");
 
 //Data Storage
 
-// let cookieCount = 0;
-// let cps = 0;
+let cookieCount = 0;
+let cps = 0;
 
-// let stats = {
-//   cookieCount: 0,
-//   cps: 0,
-// };
+let stats = {
+  cookieCount: 0,
+  cps: 0,
+};
 
 //if there is data in local Storage, update stats with this data so that the user picks up where they left off
 
@@ -35,15 +35,20 @@ console.log("MOO!");
 
 //fetch the upgrades from the API
 
+let shopArray = [];
+
 async function getMyShopItems() {
   const response = await fetch(
     "https://cookie-upgrade-api.vercel.app/api/upgrades"
   );
-  console.log("HTTP Repsonse:", response);
+  // console.log("HTTP Repsonse:", response);
   const json = await response.json();
-  console.log("JSON Data", json);
+  // console.log("JSON Data", json);
+  shopArray = json;
+  console.log("shopArray data", shopArray);
 }
 getMyShopItems();
+
 // To create multiple DOM elements in a more convientient was, you can use a loop.
 
 //TODO: create DOM elements to contain the upgrades in the shop

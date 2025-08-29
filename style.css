@@ -17,7 +17,12 @@ body {
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
-  background-color: chartreuse;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  border: 2px solid black;
 }
 
 #cookie-container {
@@ -25,16 +30,31 @@ body {
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
-  background-color: aquamarine;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  object-fit: contain;
+  border: 2px solid black;
 }
 
-#cookie-container img {
-  max-width: 50%;
-  max-height: 50%;
+#cookie-clicker-button img {
+  width: 250px;
+  height: auto;
+}
+
+#cookie-clicker-button {
+  background-color: white;
+  margin: 30px;
+  border: none;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
   cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #cookie-shop {
@@ -42,19 +62,23 @@ body {
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 4;
-  background-color: rgb(255, 163, 43);
+  background-color: white;
+  border: 2px solid black;
 }
 #cookie-counter {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 3;
   grid-row-end: 4;
-  background-color: brown;
+  background-color: white;
+  min-height: 80px;
+  border: 2px solid black;
 }
 #cookie-stats {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 4;
-  background-color: blueviolet;
+  background-color: white;
+  border: 2px solid black;
 }
