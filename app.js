@@ -6,10 +6,13 @@ const cookieCountTotal = document.getElementById("counter-clicked");
 const cpsTotal = document.getElementById("counter-cps");
 const cookieButtonClicker = document.getElementById("cookie-clicker-button");
 
-let stats = {
+//if there is data in local Storage, update stats with this data so that the user picks up where they left off
+
+let stats = JSON.parse(localStorage.getItem("cookieClickerStats")) || {
   cookieCount: 0,
   cps: 0,
 };
+console.log("Stats", stats);
 
 function updateCookieTotal() {
   cookieCountTotal.textContent = stats.cookieCount + " cookies!";
@@ -36,7 +39,7 @@ async function getMyShopItems() {
   );
   const json = await response.json();
   shopArray = json;
-  console.log(json);
+
   addShopItems();
 }
 
@@ -61,8 +64,6 @@ setInterval(saveGame, 30000);
 updateCookieTotal();
 updateCPS();
 getMyShopItems();
-
-//if there is data in local Storage, update stats with this data so that the user picks up where they left off
 
 //==============================================
 
