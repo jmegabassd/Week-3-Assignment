@@ -5,6 +5,7 @@ let shopArray = [];
 const cookieCountTotal = document.getElementById("counter-clicked");
 const cpsTotal = document.getElementById("counter-cps");
 const cookieButtonClicker = document.getElementById("cookie-clicker-button");
+const resetGameButton = document.getElementById("reset-cookies-button");
 
 let stats = JSON.parse(localStorage.getItem("cookieClickerStats")) || {
   cookieCount: 0,
@@ -58,9 +59,6 @@ function saveGame() {
   localStorage.setItem("cookieClickerStats", JSON.stringify(stats));
 }
 
-setInterval(addCPS, 1000);
-setInterval(saveGame, 30000);
-
 function buyShopItem(shopItemIndex) {
   const item = shopArray[shopItemIndex];
   if (stats.cookieCount >= item.cost) {
@@ -74,6 +72,22 @@ function buyShopItem(shopItemIndex) {
     console.log("You can't afford it");
   }
 }
+
+function resetCookies() {
+  if (confirm("Are you sure you want to reset the game?"))
+    stats = {
+      cookieCount: 0,
+      cps: 0,
+    };
+  localStorage.clear();
+  updateCookieTotal();
+  updateCPS();
+}
+
+resetGameButton.addEventListener("click", resetCookies);
+
+setInterval(addCPS, 1000);
+setInterval(saveGame, 1000);
 
 updateCookieTotal();
 updateCPS();

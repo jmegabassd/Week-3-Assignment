@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A game where you can click the cookie image to generate cookies!"
+    />
     <link rel="stylesheet" href="./style.css" />
     <script src="./app.js" defer></script>
     <title>Cookie Clicker</title>
@@ -11,18 +15,23 @@
     <div id="cookie-top">
       <h1>Cookie Clicker</h1>
     </div>
-    <div id="cookie-container">
-      <p id="counter-clicked"></p>
-      <button id="cookie-clicker-button">
-        <img
-          src="./images/cookie.png"
-          alt="A picture of a cookie that can be clicked on"
-        />
-      </button>
-      <p id="counter-cps"></p>
+
+    <div id="main-cookie-container">
+      <div id="cookie-container">
+        <p id="counter-clicked"></p>
+        <button id="cookie-clicker-button">
+          <img
+            src="./images/cookie.webp"
+            alt="A picture of a cookie that can be clicked on"
+          />
+        </button>
+        <p id="counter-cps"></p>
+        <button id="reset-cookies-button">Reset Game</button>
+      </div>
     </div>
+
     <div id="cookie-shop">
-      <h2>Upgrades</h2>
+      <h2>Shop Upgrades</h2>
     </div>
   </body>
 </html>

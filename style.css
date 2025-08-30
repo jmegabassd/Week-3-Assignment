@@ -18,11 +18,25 @@ body {
 h1 {
   background-color: rgb(75, 37, 9);
   padding: 10px;
-  border-radius: 10px;
+  width: 100%;
+  font-size: 40px;
+  padding: 5px;
 }
+
+h2 {
+  font-size: 30px;
+  background-color: chocolate;
+  word-wrap: normal;
+  text-align: center;
+  width: 300px;
+  padding: 5px;
+  border-radius: 5px;
+  align-content: center;
+  color: white;
+}
+
 #cookie-top {
   color: white;
-  font-size: 50px;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;
@@ -30,10 +44,12 @@ h1 {
   background-color: white;
   border: 5px;
   text-align: center;
-  margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#cookie-container {
+#main-cookie-container {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
@@ -44,13 +60,20 @@ h1 {
   justify-content: center;
   align-items: flex-end;
   color: white;
-  gap: 10px;
   padding: 5px;
+}
+
+#cookie-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 #cookie-clicker-button img {
   width: 250px;
-  height: auto;
+  height: 236px;
 }
 
 #cookie-clicker-button {
@@ -88,7 +111,7 @@ h1 {
   background-color: rgb(75, 37, 9);
   word-wrap: normal;
   text-align: center;
-  width: 400px;
+  width: 100%;
   padding: 5px;
   border-radius: 5px;
   align-content: center;
@@ -99,7 +122,7 @@ h1 {
   background-color: rgb(75, 37, 9);
   word-wrap: normal;
   text-align: center;
-  width: 400px;
+  width: 100%;
   padding: 5px;
   border-radius: 5px;
   align-content: center;
@@ -113,4 +136,28 @@ h1 {
   color: white;
   border-radius: 5px;
   font-weight: bolder;
+}
+
+#reset-cookies-button {
+  cursor: pointer;
+  color: white;
+  width: 50%;
+  border-radius: 5px;
+  font-weight: bolder;
+  padding: 5px;
+  font-size: 20px;
+  background-color: red;
+}
+#reset-cookies-button:hover {
+  background-color: rgba(255, 0, 0, 0.5);
+  color: black;
+}
+
+.shop-item:hover {
+  background-color: rgba(75, 36, 9, 0.8);
+  color: black;
+}
+
+#cookie-clicker-button img:hover {
+  opacity: 0.9;
 }
