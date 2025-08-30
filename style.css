@@ -11,8 +11,17 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1 {
+  background-color: chocolate;
+  padding: 10px;
+  border-radius: 10px;
 }
 #cookie-top {
+  color: white;
+  font-size: 50px;
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
@@ -21,8 +30,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 40px;
-  border: 2px solid black;
+  min-height: 50px;
+  border: 5px;
 }
 
 #cookie-container {
@@ -35,7 +44,6 @@ body {
   justify-content: center;
   align-items: center;
   object-fit: contain;
-  border: 2px solid black;
 }
 
 #cookie-clicker-button img {
@@ -63,7 +71,13 @@ body {
   grid-row-start: 2;
   grid-row-end: 4;
   background-color: white;
-  border: 2px solid black;
+  color: black;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
 }
 #cookie-counter {
   grid-column-start: 2;
@@ -71,12 +85,12 @@ body {
   grid-row-start: 3;
   grid-row-end: 4;
   background-color: white;
-  min-height: 80px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
-  margin: 5px;
+  justify-content: space-evenly;
+  color: white;
+  align-items: center;
 }
 #cookie-stats {
   grid-column-start: 3;
@@ -84,26 +98,43 @@ body {
   grid-row-start: 2;
   grid-row-end: 4;
   background-color: white;
-  border: 2px solid black;
+  color: black;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 #counter-clicked {
-  height: 25%;
-  width: 100%;
   font-size: 30px;
-  background-color: chartreuse;
-  margin: 5px;
-  padding: 5px;
+  background-color: chocolate;
+  word-wrap: normal;
   text-align: center;
-  text-wrap: inherit;
+  width: 80%;
+  padding: 5px;
+  border-radius: 5px;
+  align-content: center;
 }
 
 #counter-cps {
-  height: 25%;
-  width: 100%;
   font-size: 30px;
-  background-color: chartreuse;
-  margin: 5px;
-  padding: 5px;
+  background-color: chocolate;
+  word-wrap: normal;
   text-align: center;
+  width: 80%;
+  padding: 5px;
+  border-radius: 5px;
+  align-content: center;
+}
+
+.shop-item {
+  background-color: chocolate;
+  cursor: pointer;
+  width: 80%;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  font-weight: bolder;
 }
