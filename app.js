@@ -6,13 +6,10 @@ const cookieCountTotal = document.getElementById("counter-clicked");
 const cpsTotal = document.getElementById("counter-cps");
 const cookieButtonClicker = document.getElementById("cookie-clicker-button");
 
-//if there is data in local Storage, update stats with this data so that the user picks up where they left off
-
 let stats = JSON.parse(localStorage.getItem("cookieClickerStats")) || {
   cookieCount: 0,
   cps: 0,
 };
-console.log("Stats", stats);
 
 function updateCookieTotal() {
   cookieCountTotal.textContent = stats.cookieCount + " cookies!";
@@ -31,6 +28,7 @@ cookieButtonClicker.addEventListener("click", () => {
 function addCPS() {
   stats.cookieCount += stats.cps;
   updateCookieTotal();
+  saveGame();
 }
 
 async function getMyShopItems() {
@@ -39,7 +37,6 @@ async function getMyShopItems() {
   );
   const json = await response.json();
   shopArray = json;
-
   addShopItems();
 }
 
@@ -50,6 +47,9 @@ function addShopItems() {
     shopItemDiv.classList.add("shop-item");
     shopItemDiv.textContent = `${item.name} Price: ${item.cost} CPS: ${item.increase}`;
     shopItemDiv.id = `shop-item-${index}`;
+    shopItemDiv.addEventListener("click", () => {
+      buyShopItem(index);
+    });
     shopContainer.appendChild(shopItemDiv);
   });
 }
@@ -61,16 +61,20 @@ function saveGame() {
 setInterval(addCPS, 1000);
 setInterval(saveGame, 30000);
 
+function buyShopItem(shopItemIndex) {
+  const item = shopArray[shopItemIndex];
+  if (stats.cookieCount >= item.cost) {
+    stats.cookieCount -= item.cost;
+    stats.cps += item.increase;
+    updateCookieTotal();
+    updateCPS();
+    saveGame();
+    console.log("brought an item");
+  } else {
+    console.log("You can't afford it");
+  }
+}
+
 updateCookieTotal();
 updateCPS();
 getMyShopItems();
-
-//==============================================
-
-//Shop Upgrades
-
-// Option 1: you could have a function per upgrade
-// Option 2: you could have have a reusable function that works for all the upgrades
-
-// Tip on local storage:
-// Make sure the local storage values are updated after the user buys an upgrade
