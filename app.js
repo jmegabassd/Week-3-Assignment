@@ -46,7 +46,7 @@ function addShopItems() {
   shopArray.forEach((item, index) => {
     const shopItemDiv = document.createElement("div");
     shopItemDiv.classList.add("shop-item");
-    shopItemDiv.textContent = `${item.name} Price: ${item.cost} CPS: ${item.increase}`;
+    shopItemDiv.textContent = `${item.name}\nPrice: ${item.cost}\nCPS: ${item.increase}`;
     shopItemDiv.id = `shop-item-${index}`;
     shopItemDiv.addEventListener("click", () => {
       buyShopItem(index);
