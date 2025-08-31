@@ -198,7 +198,7 @@ h2 {
 }
 
 @media (min-width: 320px) and (max-device-width: 480px) {
-  body {
+  * {
     touch-action: manipulation;
   }
 }
