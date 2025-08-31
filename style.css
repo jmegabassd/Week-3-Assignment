@@ -197,7 +197,7 @@ h2 {
   animation: shake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 320px) and (max-device-width: 480px) {
   body {
     touch-action: manipulation;
   }
