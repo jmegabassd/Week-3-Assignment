@@ -4,12 +4,12 @@
 
 # Reflection
 
-Please also provide an assignment reflection in your project README.md file.
+#🎯 What requirements did you achieve?
 
-**Required**
-🎯 What requirements did you achieve?
-🎯 Were there any requirements or goals that you were unable to achieve?
-🎯 If so, what was it that you found difficult about these tasks?
+#🎯 Were there any requirements or goals that you were unable to achieve?
+
+#🎯 If so, what was it that you found difficult about these tasks?
+
 Optional
 🏹 Feel free to add any other reflections you would like to share about your submission, for example:
 
